@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Very Real Personality Quiz</title>
+</head>
+<body>
+    <main id="main">
+        <h1>Welcome!</h1>
+        <p>Enter some info below to learn more about your inner self</p>
+
+        <label>
+            First Name
+            <input type="text" name="fName" id="fName">
+        </label>
+
+        <label>
+            Last Name
+            <input type="text" name="lName" id="lName">
+        </label>
+
+        <button id="submit">Submit</button>
+    </main>
+
+    <script>
+        document.querySelector('#submit').addEventListener('click', () => {
+            const fName = document.querySelector('#fName').value.toLowerCase();
+            const lName = document.querySelector('#lName').value.toLowerCase();
+
+
+            if (fName == 'yvonne' && lName == 'hayes') {
+                document.querySelector('#main').innerHTML = "";
+                document.querySelector('#main').innerHTML += "<h1>Your personality is...</h1>";
+                document.querySelector('#main').innerHTML += "<p>You are a kind soul. You are the lighthouse that stands tall. A shining beacon breaking through the darkest of storms, guiding others on their way.</p>"
+                document.querySelector('#main').innerHTML += '<img src="https://t3.ftcdn.net/jpg/16/07/37/82/360_F_1607378266_raIymHdVsmV3fwH7vwQfYw7XxpQUOWtY.jpg" alt="">';
+            } else {
+                document.querySelector('#main').innerHTML = "";
+                document.querySelector('#main').innerHTML += "<p>Okay, very funny Yvonne. ( ｡ •̀ ᴖ •́ ｡)💢</p>";
+                document.querySelector('#main').innerHTML += "<p>I only programmed this website to respond to your name.</p>"
+                document.querySelector('#main').innerHTML += "<p>Refresh the page and do it right</p>"
+                document.querySelector('#main').innerHTML += "<p>୧(๑•̀ᗝ•́)૭</p>"
+            }
+        })
+    </script>
+</body>
+</html>
